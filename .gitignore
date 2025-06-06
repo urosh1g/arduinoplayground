@@ -1,0 +1,5 @@
+.cache
+
+*.elf
+*.hex
+compile_commands.json
