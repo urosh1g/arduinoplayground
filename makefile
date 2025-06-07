@@ -13,7 +13,7 @@ F_CPU = 16000000UL
 
 INCLUDE_DIR = include
 SRC_DIR = src
-CFLAGS = -I$(INCLUDE_DIR) -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os
+CFLAGS = -I$(INCLUDE_DIR) -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -Werror -std=c99 
 
 TARGET = main
 SRC = $(SRC_DIR)/main.c
