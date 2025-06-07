@@ -21,7 +21,6 @@ int main() {
             PORTD = temp;
         }
         _delay_ms(2000);
-        (void)temp;
         (void)humidity;
     }
     return 0;

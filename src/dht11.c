@@ -35,6 +35,9 @@ static inline uint8_t read_byte() {
 }
 
 uint8_t dht11_read() {
+    *data_pin.ddr |= _BV(data_pin.bit);
+    *data_pin.port |= _BV(data_pin.bit);
+
     *data_pin.port &= ~_BV(data_pin.bit);
     _delay_ms(20);
 
@@ -65,6 +68,7 @@ uint8_t dht11_read() {
     read_byte(); // TEMP FRACTION
     read_byte(); // CRC
     asm("sei");
+
     return 0;
 }
 
