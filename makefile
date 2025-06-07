@@ -13,10 +13,10 @@ F_CPU = 16000000UL
 
 INCLUDE_DIR = include
 SRC_DIR = src
-CFLAGS = -I$(INCLUDE_DIR) -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -Werror -std=c99 
+CFLAGS = -I$(INCLUDE_DIR) -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -Werror -std=gnu99 
 
 TARGET = main
-SRC = $(SRC_DIR)/main.c
+SRC = $(SRC_DIR)/main.c $(SRC_DIR)/dht11.c
 
 all: $(TARGET).hex
 
